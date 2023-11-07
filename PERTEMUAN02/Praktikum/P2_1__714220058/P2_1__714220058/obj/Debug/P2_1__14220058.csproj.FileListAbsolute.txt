@@ -1,0 +1,7 @@
+C:\Users\Lenovo\source\repos\P2_1__14220058\P2_1__14220058\bin\Debug\P2_1__14220058.exe.config
+C:\Users\Lenovo\source\repos\P2_1__14220058\P2_1__14220058\bin\Debug\P2_1__14220058.exe
+C:\Users\Lenovo\source\repos\P2_1__14220058\P2_1__14220058\bin\Debug\P2_1__14220058.pdb
+C:\Users\Lenovo\source\repos\P2_1__14220058\P2_1__14220058\obj\Debug\P2_1__14220058.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\P2_1__14220058\P2_1__14220058\obj\Debug\P2_1__14220058.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\P2_1__14220058\P2_1__14220058\obj\Debug\P2_1__14220058.exe
+C:\Users\Lenovo\source\repos\P2_1__14220058\P2_1__14220058\obj\Debug\P2_1__14220058.pdb

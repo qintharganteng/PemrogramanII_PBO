@@ -1,0 +1,15 @@
+Muhammad Qinthar (714220058)
+
+BAGIAN1
+
+14. Mengapa pesan kesalahan muncul dikarenakan  ProductTest_714220058 tidak mewarisi kelas Product_714220058. Jika Anda ingin mengakses myType, Anda perlu mengubah tingkat akses dari protected menjadi public.
+seharusnya public string myTipe = "Book";.
+
+19. Menjadi kosong karena property Mytype tidak terdapat nilai pada konstuktor sehingga tidak memunculkan apa apa.
+
+24. Karena di Console.WriteLine(myProduct.MyType) dan pada dalam myProduct.MyType adalah "DVD"; sehingga memunculkan output DVD.
+
+BAGIAN2
+8. Mengapa Title tidak muncul karena terdapat kesalahan pada pemilihan type data seharusnya string.
+
+12.Judul buku tampil di output karena pada konstruktor Book_714220013, properti type dan judul dari kelas Product_714220013 diatur melalui panggilan konstruktor.
