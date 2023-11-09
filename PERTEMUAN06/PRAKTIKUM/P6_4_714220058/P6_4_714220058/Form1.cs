@@ -115,38 +115,36 @@ namespace P6_4_714220058
 
         private void textBox4_Leave(object sender, EventArgs e)
         {
-            int sizesepatu = Convert.ToInt32(textBox4.Text);
-
             if (textBox4.Text == "")
             {
                 epCorrect.SetError(textBox4, "");
                 epWrong.SetError(textBox4, "");
                 epWarning.SetError(textBox4, "SIZE SEPATU HARUS DIISI");
             }
-            else
+  
+            
+            if ((textBox4.Text).All(Char.IsNumber))
             {
-                if ((textBox4.Text).All(Char.IsNumber))
+               if (textBox4.Text.Length >= 30 && (textBox4.Text.Length <= 45))
                 {
-                    if (sizesepatu >= 30 )
-                    {
-                        epCorrect.SetError(textBox4, "SIZE SEPATU SUDAH TER INPUT");
-                        epWrong.SetError(textBox4, "");
-                        epWarning.SetError(textBox4, "");
-                    }
-                    else
-                    {
-                        epCorrect.SetError(textBox4, "");
-                        epWrong.SetError(textBox4, "");
-                        epWarning.SetError(textBox4, "SIZE SEPATU HARUS LEBIH DARI 30");
-                    }
-                }
+                    epCorrect.SetError(textBox4, "SIZE SEPATU SUDAH TER INPUT");
+                    epWrong.SetError(textBox4, "");
+                    epWarning.SetError(textBox4, "");
+               }
+               else
+               {
+                    epCorrect.SetError(textBox4, "");
+                    epWrong.SetError(textBox4, "");
+                    epWarning.SetError(textBox4, "SIZE SEPATU HARUS MINIMAL 30 SAMPAI 45");
+               }
+            }
             else
             {
                     epCorrect.SetError(textBox4, "");
                     epWrong.SetError(textBox4, "HARUS ANGKA");
                     epWarning.SetError(textBox4, "");
             }
-            }
+            
             
         }
 
@@ -173,11 +171,11 @@ namespace P6_4_714220058
                 return;
             }
 
-            MessageBox.Show("NAMA : " + textBox1 +
-                "\n NOMOR HP : " + textBox2 +
-                "\n EMAIL : " + textBox3 +
-                "\n SIZE : " + textBox4 +
-                "\n MERK SEPATU" + comboBox1,
+            MessageBox.Show("NAMA : " + textBox1.Text +
+                "\n NOMOR HP : " + textBox2.Text +
+                "\n EMAIL : " + textBox3.Text +
+                "\n SIZE : " + textBox4.Text +
+                "\n MERK SEPATU : " + comboBox1.Text,
                 "PEMESANAN SEPATU", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
