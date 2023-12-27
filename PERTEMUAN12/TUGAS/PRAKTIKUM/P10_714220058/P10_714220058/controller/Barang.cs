@@ -13,7 +13,8 @@ namespace P10_714220058.controller
 
         Koneksi koneksi = new Koneksi();
 
-        public bool Insert(model.M_barang barang) //masuk
+        //Method insert
+        public bool Insert(M_barang barang)
         {
             Boolean status = false;
             try
@@ -21,19 +22,19 @@ namespace P10_714220058.controller
                 koneksi.OpenConnection();
                 koneksi.ExecuteQuery("INSERT INTO t_barang (nama_barang,harga) VALUES('" + barang.Nama_barang + "', '" + barang.Harga + "')");
                 status = true;
-                MessageBox.Show("Data Berhasil Ditambahkan", "Informasi",
+                MessageBox.Show("Data berhasil ditambahkan", "Informasi",
                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.CloseConnection();
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Aktifitas Gagal", MessageBoxButtons.OK,
+                MessageBox.Show(e.Message, "Gagal", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
             }
             return status;
         }
-
-        public bool Update(M_barang barang, string id) //update
+        //Method update
+        public bool Update(M_barang barang, string id)
         {
             Boolean status = false;
             try
@@ -43,19 +44,19 @@ namespace P10_714220058.controller
                barang.Nama_barang + "'," + "harga='" + barang.Harga + "' WHERE id_barang = '" + id + "'");
 
                 status = true;
-                MessageBox.Show("Data Berhasil Diubah", "Informasi",
+                MessageBox.Show("Data berhasil diubah", "Informasi",
                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.CloseConnection();
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Aktifitas Gagal", MessageBoxButtons.OK,
+                MessageBox.Show(e.Message, "Gagal", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
             }
             return status;
         }
-
-        public bool Delete(string id) //hapus
+        //Method delete
+        public bool Delete(string id)
         {
             Boolean status = false;
             try
@@ -70,10 +71,11 @@ namespace P10_714220058.controller
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Aktifitas Gagal", MessageBoxButtons.OK,
+                MessageBox.Show(e.Message, "Gagal", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
             }
             return status;
+
         }
     }
 }

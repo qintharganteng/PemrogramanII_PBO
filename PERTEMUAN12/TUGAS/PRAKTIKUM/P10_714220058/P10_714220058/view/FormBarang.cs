@@ -33,26 +33,28 @@ namespace P10_714220058.view
 
         public void resetForm()
         {
-            namabarang.Text = "";
+            nama_barang.Text = "";
             harga.Text = "";
             caridata.Text = "";
         }
 
         private void DataNilai_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            id_barang = Databarang.Rows[e.RowIndex].Cells[0].Value.ToString();
+            nama_barang.Text = Databarang.Rows[e.RowIndex].Cells[1].Value.ToString();
+            harga.Text = Databarang.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
 
         private void btnsimpan_Click(object sender, EventArgs e)
         {
-            if (namabarang.Text == "" || (namabarang.Text).All(Char.IsNumber) || harga.Text == "" || (harga.Text).All(Char.IsLetter))
+            if (nama_barang.Text == "" || (nama_barang.Text).All(Char.IsNumber) || harga.Text == "" || (harga.Text).All(Char.IsLetter))
             {
                 MessageBox.Show("Isi data dengan benar sebelum dimasukkan!", "Terjadi Kesalahan Insert", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 Barang barang = new Barang();
-                m_barang.Nama_barang = namabarang.Text;
+                m_barang.Nama_barang = nama_barang.Text;
                 m_barang.Harga = harga.Text;
 
                 barang.Insert(m_barang);
@@ -71,10 +73,10 @@ namespace P10_714220058.view
 
         private void btnubah_Click(object sender, EventArgs e)
         {
-            if (namabarang.Text != "" || !namabarang.Text.All(Char.IsNumber) || harga.Text != "" || !harga.Text.All(Char.IsLetter))
+            if (nama_barang.Text != "" || !nama_barang.Text.All(Char.IsNumber) || harga.Text != "" || !harga.Text.All(Char.IsLetter))
             {
                 Barang barang = new Barang();
-                m_barang.Nama_barang = namabarang.Text;
+                m_barang.Nama_barang = nama_barang.Text;
                 m_barang.Harga = harga.Text;
 
                 barang.Update(m_barang, id_barang);
@@ -114,8 +116,7 @@ namespace P10_714220058.view
             return string.Format("Rp {0:N0}", number);
         }
 
-
-        private void DataBarang_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void Databarang_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.ColumnIndex == 2 && e.Value != null)
             {
@@ -125,13 +126,6 @@ namespace P10_714220058.view
                     e.FormattingApplied = true;
                 }
             }
-        }
-
-        private void DataBarang_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            id_barang = Databarang.Rows[e.RowIndex].Cells[0].Value.ToString();
-            namabarang.Text = Databarang.Rows[e.RowIndex].Cells[1].Value.ToString();
-            harga.Text = Databarang.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
     }
 }

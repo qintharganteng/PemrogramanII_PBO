@@ -9,22 +9,20 @@ namespace P10_714220058.model
     internal class M_barang
     {
         string nama_barang, harga;
-
         public M_barang()
         {
         }
+
         public M_barang(string nama_barang, string harga)
         {
             this.Nama_barang = nama_barang;
-            this.harga = harga;
+            this.Harga = harga;
         }
-
         public string Nama_barang
         {
             get => nama_barang; set => nama_barang =
-            value;
+       value;
         }
-
         public string Harga { get => harga; set => harga = value; }
     }
 }

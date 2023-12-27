@@ -39,7 +39,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.harga = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.namabarang = new System.Windows.Forms.TextBox();
+            this.nama_barang = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.caridata = new System.Windows.Forms.TextBox();
@@ -61,6 +61,7 @@
             this.Databarang.Size = new System.Drawing.Size(1084, 351);
             this.Databarang.TabIndex = 0;
             this.Databarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataNilai_CellContentClick);
+            this.Databarang.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Databarang_CellFormatting_1);
             // 
             // label2
             // 
@@ -152,7 +153,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.namabarang);
+            this.groupBox2.Controls.Add(this.nama_barang);
             this.groupBox2.Controls.Add(this.harga);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
@@ -163,12 +164,12 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Form Barang";
             // 
-            // namabarang
+            // nama_barang
             // 
-            this.namabarang.Location = new System.Drawing.Point(174, 31);
-            this.namabarang.Name = "namabarang";
-            this.namabarang.Size = new System.Drawing.Size(406, 26);
-            this.namabarang.TabIndex = 10;
+            this.nama_barang.Location = new System.Drawing.Point(174, 31);
+            this.nama_barang.Name = "nama_barang";
+            this.nama_barang.Size = new System.Drawing.Size(406, 26);
+            this.nama_barang.TabIndex = 10;
             // 
             // groupBox4
             // 
@@ -235,7 +236,7 @@
         private System.Windows.Forms.TextBox harga;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.TextBox namabarang;
+        private System.Windows.Forms.TextBox nama_barang;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox caridata;
         private System.Windows.Forms.Label label4;
